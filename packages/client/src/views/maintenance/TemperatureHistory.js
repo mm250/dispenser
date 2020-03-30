@@ -1,8 +1,13 @@
 import React from 'react';
+import {PropTypes} from "prop-types";
 
 import './TemperatureHistory.css';
 
-function TemperatureHistory({ temperatures }) {
+function TemperatureHistory(
+  {
+    temperatures
+  })
+{
   return (
     <div className="temperature-history">
       <div className="temperature-history-heading">Temperature History</div>
@@ -16,5 +21,9 @@ function TemperatureHistory({ temperatures }) {
     </div>
   );
 }
+
+TemperatureHistory.propTypes = {
+  temperatures: PropTypes.array.isRequired,
+};
 
 export default TemperatureHistory;

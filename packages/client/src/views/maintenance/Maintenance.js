@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import {PropTypes} from "prop-types";
 import { createStructuredSelector } from 'reselect';
 
 import ProductLevels from './ProductLevels';
@@ -13,8 +14,14 @@ import { attemptRetrieveTemperatureReadings } from '../../temperature/action';
 
 import './Maintenance.css';
 
-function Maintenance({ temperatureHistory, stock, machine_id, dispatchAttemptRetrieveTemperatureReadings }) {
-
+function Maintenance(
+  {
+    temperatureHistory,
+    stock,
+    machine_id,
+    dispatchAttemptRetrieveTemperatureReadings
+  })
+{
   useEffect(() => {
 
     dispatchAttemptRetrieveTemperatureReadings({ machine_id });
@@ -30,6 +37,12 @@ function Maintenance({ temperatureHistory, stock, machine_id, dispatchAttemptRet
     </div>
   );
 }
+
+Maintenance.propTypes = {
+  temperatureHistory: PropTypes.array.isRequired,
+  stock: PropTypes.array.isRequired,
+  dispatchAttemptRetrieveTemperatureReadings: PropTypes.func.isRequired
+};
 
 const mapStateToProps = createStructuredSelector({
   stock: getStock,

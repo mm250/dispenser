@@ -1,12 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {PropTypes} from "prop-types";
 
 import { selectAddonAdd, selectAddonRemove } from "../../products/action";
 
 import './Addon.css';
 
-
-function Addon({ product, onSelectAdd, onSelectRemove }) {
+function Addon(
+  {
+    product,
+    onSelectAdd,
+    onSelectRemove
+  })
+{
   return (
     <div className="addon">
       <div className="addon-name">{product.name}</div>
@@ -21,6 +27,12 @@ function Addon({ product, onSelectAdd, onSelectRemove }) {
       </div>
     </div>
   );
+}
+
+Addon.propTypes = {
+  product: PropTypes.object.isRequired,
+  onSelectRemove: PropTypes.func.isRequired,
+  onSelectAdd: PropTypes.func.isRequired,
 }
 
 const mapDispatchToProps = dispatch => ({

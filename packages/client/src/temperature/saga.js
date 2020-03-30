@@ -15,7 +15,6 @@ const POLLING_DELAY = 60000;
 export const submitTemperatureReading = function* (
   loop = true
 ) {
-
   while (loop) {
     const currentTemperature = yield select(getCurrentTemperatureRequest);
     yield fork(postSubmitTemperatureReading, currentTemperature);

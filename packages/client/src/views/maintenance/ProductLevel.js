@@ -1,9 +1,14 @@
 import React from 'react';
+import {PropTypes} from "prop-types";
 
 import './ProductLevel.css';
 
-function ProductLevel({ name, level,  }) {
-
+function ProductLevel(
+  {
+    name,
+    level
+  })
+{
   return (
     <div className="productLevel">
       <div>{name}</div>
@@ -11,5 +16,10 @@ function ProductLevel({ name, level,  }) {
     </div>
   );
 }
+
+ProductLevel.propTypes = {
+  name: PropTypes.string.isRequired,
+  level: PropTypes.number.isRequired
+};
 
 export default ProductLevel;

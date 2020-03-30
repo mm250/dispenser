@@ -1,9 +1,15 @@
 import React from 'react';
+import {PropTypes} from "prop-types";
 
 import './Header.css';
 
-function Header({ view, onDrinks, onMaintenance }) {
-
+function Header(
+  {
+    view,
+    onDrinks,
+    onMaintenance
+  })
+{
   return (
     <div className="header">
       <button
@@ -19,5 +25,11 @@ function Header({ view, onDrinks, onMaintenance }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  view: PropTypes.string.isRequired,
+  onMaintenance: PropTypes.func.isRequired,
+  onDrinks: PropTypes.func.isRequired
+};
 
 export default Header;

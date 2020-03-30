@@ -8,6 +8,7 @@ import {
   retrieveTemperatureReadings,
   cancelPolling
 } from './saga';
+
 import {getTemperatureReadings} from './request';
 
 import {successRetrieveTemperatureReadings} from "./action";

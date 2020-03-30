@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { PropTypes } from "prop-types";
 
 import { selectDrinkProduct } from '../../products/action';
 
@@ -50,6 +51,13 @@ function Dispenser(
       </div>
   );
 };
+
+Dispenser.propTypes = {
+  drinks: PropTypes.array.isRequired,
+  addons: PropTypes.array.isRequired,
+  selectedProduct: PropTypes.array.isRequired,
+  onSelectDrinkProduct: PropTypes.func.isRequired,
+}
 
 const mapStateToProps = createStructuredSelector({
   drinks: getDrinks,

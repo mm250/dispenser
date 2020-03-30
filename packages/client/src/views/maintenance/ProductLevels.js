@@ -1,8 +1,14 @@
 import React from 'react';
 import ProductLevel from './ProductLevel';
+import {PropTypes} from "prop-types";
+
 import './ProductLevels.css';
 
-function ProductLevels({ stock  }) {
+function ProductLevels(
+  {
+    stock
+  })
+{
   return (
     <div className="product-levels">
       <div className="product-levels-heading">Stock Levels</div>
@@ -14,5 +20,9 @@ function ProductLevels({ stock  }) {
     </div>
   );
 }
+
+ProductLevels.propTypes = {
+  stock: PropTypes.array.isRequired
+};
 
 export default ProductLevels;

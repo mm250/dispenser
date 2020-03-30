@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from "reselect";
 
@@ -35,7 +36,6 @@ function App (
           message && <Toast message={message.text} type={message.type} />
         }
 
-
         <Header
           onDrinks={() => setView("drinks")}
           onMaintenance={() => setView("maintenance")}
@@ -48,6 +48,12 @@ function App (
   );
 }
 
+App.propTypes = {
+  message: PropTypes.object,
+  dispatchPollingSubmitTemperature: PropTypes.func,
+  dispatchEndPollingSubmitTemperature: PropTypes.func
+};
+
 const mapDispatchToProps = dispatch => ({
   dispatchPollingSubmitTemperature: () => dispatch(pollingSubmitTemperatureReading()),
   dispatchEndPollingSubmitTemperature: () => dispatch(endPollingSubmitTemperatureReading())
@@ -58,3 +64,5 @@ const mapStateToProps = createStructuredSelector({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
