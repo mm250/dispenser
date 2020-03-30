@@ -1,0 +1,8 @@
+.toast {
+    color: #edf5e1;
+    background-color: #05386b;
+    padding: 10px;
+}
+.toast-error {
+    background-color: #fc4445;
+}

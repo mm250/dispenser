@@ -1,0 +1,13 @@
+.temperature {
+    background-color: #379683;
+    color: #edf5e1;
+    padding: 10px;
+}
+
+.temperature-label {
+    margin-bottom: 5px;
+}
+
+.temperature-label-text {
+    font-weight: bold;
+}

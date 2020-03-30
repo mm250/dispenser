@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color:  #05386b;
+  padding: 20px;
+}
+
+button {
+  background-color: #8ee4af;
+  color: #05386b;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #379683;
+}
+
+button:focus {
+  outline: none;
+}
+

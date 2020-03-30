@@ -1,0 +1,16 @@
+.product-levels-container {
+    display: flex;
+}
+
+.product-levels-heading {
+    margin: auto;
+    margin-bottom: 15px;
+    width: 130px;
+    text-align: center;
+}
+
+.product-levels {
+    background-color: #379683;
+    padding: 20px 0;
+    color: #edf5e1;
+}

@@ -1,0 +1,20 @@
+.dispenser {
+    display: flex;
+    margin: 20px 0;
+}
+
+.dispenser-container {
+    display: flex;
+    width: 600px;
+    height: 100px;
+}
+
+.dispenser-btn {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.dispenser-btn-selected {
+    border: 1px solid #05386b;
+    background-color: #379683;
+}

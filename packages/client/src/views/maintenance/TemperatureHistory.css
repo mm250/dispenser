@@ -1,0 +1,23 @@
+.temperature-history-heading {
+    margin: auto;
+    margin-bottom: 15px;
+    width: 150px;
+    text-align: center;
+}
+
+.temperature-history-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.temperature-history {
+    background-color: #8ee4af;
+    padding: 20px 0;
+    color: #05386b;
+}
+
+.temperature-history-item {
+    margin-right: 14px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+.maintenance {
+    margin: 20px 0;
+}
+
+.maintenance-temperature-history {
+    display: flex;
+}

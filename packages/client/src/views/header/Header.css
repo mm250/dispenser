@@ -1,0 +1,12 @@
+.header {
+    margin: 20px 0;
+}
+
+.header-btn {
+    margin-right: 8px;
+}
+
+.header-btn-selected {
+    border: 1px solid #05386b;
+    background-color: #379683;
+}
