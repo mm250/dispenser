@@ -1,0 +1,20 @@
+{
+  "name": "dispenser",
+  "version": "1.0.0",
+  "description": "HSBC Dispenser test",
+  "main": "index.js",
+  "author": "Maurice Morgan",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace api start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
